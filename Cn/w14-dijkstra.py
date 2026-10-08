@@ -56,3 +56,26 @@ for i in range(n):
 source = int(input("Enter source vertex: "))
 
 dijkstra(graph, n, source)
+
+
+# Input:
+# Enter number of vertices: 4
+# Enter the cost matrix:
+# 0 3 0 7
+# 8 0 2 0
+# 5 0 0 1
+# 2 0 0 0
+# Enter source vertex: 0
+
+# Output:
+# Shortest distances from vertex 0
+# Vertex 0 = 0
+# Vertex 1 = 3
+# Vertex 2 = 5
+# Vertex 3 = 6
+
+# Shortest Paths:
+# 0 = 0
+# 0 -> 1 = 3
+# 0 -> 1 -> 2 = 5
+# 0 -> 1 -> 2 -> 3 = 6
