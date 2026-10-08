@@ -1,0 +1,64 @@
+WEEK 13: CONFIGURING FTP SERVER FOR FILE SHARING
+
+PROCEDURE:
+
+1. Open Control Panel → Programs → Turn Windows features on or off.
+
+2. Enable Internet Information Services (IIS).
+
+3. Expand IIS and enable:
+   FTP Server → FTP Service
+   Web Management Tools → IIS Management Console
+
+4. Click OK and complete the installation.
+
+5. Create a folder for file sharing.
+   Example: C:\FTP
+
+6. Open IIS Manager.
+
+7. Right-click Sites → Add FTP Site.
+
+8. Enter the FTP site name and select the folder C:\FTP.
+
+9. Set the IP address and port number as 21.
+
+10. Select No SSL and click Next.
+
+11. Select Basic Authentication.
+
+12. Select Specified Users and enter the Windows username.
+
+13. Give Read and Write permissions.
+
+14. Click Finish and start the FTP site.
+
+15. Find the server IP address using:
+   ipconfig
+
+16. On another computer connected to the same network, open Command Prompt.
+
+17. Connect to the FTP server using:
+   ftp <server-ip>
+
+18. Enter the username and password when prompted.
+
+19. Use the following commands for file sharing:
+   dir              → Display files
+   get filename     → Download a file
+   put filename     → Upload a file
+   bye              → Exit FTP
+
+EXPECTED OUTPUT:
+
+Connected to <server-ip>.
+220 Microsoft FTP Service
+230 User logged in.
+
+ftp> dir
+ftp> get test.txt
+226 Transfer complete.
+
+CONCLUSION:
+
+The FTP server was successfully configured and files were shared between computers using FTP.

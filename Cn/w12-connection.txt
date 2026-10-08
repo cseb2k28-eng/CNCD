@@ -1,0 +1,43 @@
+WEEK 12: ESTABLISHING A NETWORK BETWEEN COMPUTERS
+
+PROCEDURE:
+
+1. Connect both computers to the same Wi-Fi network or connect them using an Ethernet cable.
+
+2. On both computers, open Command Prompt.
+
+3. Check the IP address of Computer 1:
+   ipconfig
+
+4. Note the IPv4 Address of Computer 1.
+
+5. Check the IP address of Computer 2:
+   ipconfig
+
+6. Note the IPv4 Address of Computer 2.
+
+7. Make sure both computers are in the same network.
+
+   Example:
+   Computer 1: 192.168.1.10
+   Computer 2: 192.168.1.11
+   Subnet Mask: 255.255.255.0
+
+8. On Computer 1, open Command Prompt and ping Computer 2:
+   ping 192.168.1.11
+
+9. On Computer 2, open Command Prompt and ping Computer 1:
+   ping 192.168.1.10
+
+10. If both computers receive "Reply from..." messages, the network connection is successful.
+
+EXPECTED OUTPUT:
+
+Reply from 192.168.1.11: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.11: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.11: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.11: bytes=32 time<1ms TTL=128
+
+CONCLUSION:
+
+The network between the two computers was successfully established and connectivity was verified using the ping command.
